@@ -1,0 +1,19 @@
+---
+title: "R Markdown Presentation & Plotly_Sep14, 2017"
+author: "Coursera_Fan"
+date: "September 14, 2017"
+output:
+  slidy_presentation: default
+  ioslides_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+#### mtcars data showing plot between mpg & wt. As weight increases mpg is reducing
+
+```{r, echo = FALSE, message=FALSE, warning=F}
+library(plotly)
+plot_ly(data=mtcars, x= ~wt,y= ~mpg, mode="markers" ,color = as.factor(mtcars$cyl))
+```
